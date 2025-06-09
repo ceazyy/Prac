@@ -821,16 +821,15 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceItems.forEach(item => observer.observe(item));
     }
     
-    // Enhanced About Gallery
+    // About Background Slider
     function initAboutAnimations() {
-        const gallery = document.querySelector('.about-gallery-container');
-        if (!gallery) return;
+        const slider = document.querySelector('.about-background-slider');
+        if (!slider) return;
 
-        const slides = gallery.querySelectorAll('.gallery-slide');
-        const thumbnails = gallery.querySelectorAll('.thumbnail');
-        const prevBtn = gallery.querySelector('.prev-btn');
-        const nextBtn = gallery.querySelector('.next-btn');
-        const progressBar = gallery.querySelector('.progress-bar');
+        const slides = slider.querySelectorAll('.background-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.about-slider-controls .prev-btn');
+        const nextBtn = document.querySelector('.about-slider-controls .next-btn');
         
         let currentIndex = 0;
         let isTransitioning = false;
@@ -840,29 +839,23 @@ document.addEventListener('DOMContentLoaded', function() {
             if (isTransitioning || index === currentIndex) return;
             isTransitioning = true;
 
-            // Remove active class from all slides and thumbnails
+            // Remove active class from all slides and dots
             slides.forEach(slide => slide.classList.remove('active'));
-            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
 
-            // Add active class to current slide and thumbnail
+            // Add active class to current slide and dot
             if (slides[index]) {
                 slides[index].classList.add('active');
             }
-            if (thumbnails[index]) {
-                thumbnails[index].classList.add('active');
-            }
-
-            // Update progress bar
-            if (progressBar) {
-                const progressWidth = ((index + 1) / slides.length) * 100;
-                progressBar.style.width = `${progressWidth}%`;
+            if (dots[index]) {
+                dots[index].classList.add('active');
             }
 
             currentIndex = index;
             
             setTimeout(() => {
                 isTransitioning = false;
-            }, 800);
+            }, 2000);
         }
 
         function nextSlide() {
@@ -877,7 +870,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function startAutoPlay() {
             stopAutoPlay();
-            autoPlayInterval = setInterval(nextSlide, 5000);
+            autoPlayInterval = setInterval(nextSlide, 6000);
         }
 
         function stopAutoPlay() {
@@ -902,16 +895,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        thumbnails.forEach((thumb, index) => {
-            thumb.addEventListener('click', () => {
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
                 showSlide(index);
                 startAutoPlay(); // Restart autoplay after manual navigation
             });
         });
 
-        // Pause autoplay on hover
-        gallery.addEventListener('mouseenter', stopAutoPlay);
-        gallery.addEventListener('mouseleave', startAutoPlay);
+        // Pause autoplay on hover over the entire section
+        const aboutSection = document.querySelector('.premium-about');
+        if (aboutSection) {
+            aboutSection.addEventListener('mouseenter', stopAutoPlay);
+            aboutSection.addEventListener('mouseleave', startAutoPlay);
+        }
 
         // Initialize first slide and start autoplay
         if (slides.length > 0) {
