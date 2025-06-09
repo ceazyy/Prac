@@ -1,0 +1,25 @@
+<svg width="200" height="40" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Crayon Icons -->
+  <rect x="2" y="8" width="6" height="24" rx="3" fill="#E74C3C"/>
+  <polygon points="5,5 2,8 8,8" fill="#C0392B"/>
+  
+  <rect x="10" y="6" width="6" height="24" rx="3" fill="#3498DB"/>
+  <polygon points="13,3 10,6 16,6" fill="#2980B9"/>
+  
+  <rect x="18" y="10" width="6" height="24" rx="3" fill="#F1C40F"/>
+  <polygon points="21,7 18,10 24,10" fill="#F39C12"/>
+  
+  <rect x="26" y="4" width="6" height="24" rx="3" fill="#2ECC71"/>
+  <polygon points="29,1 26,4 32,4" fill="#27AE60"/>
+  
+  <rect x="34" y="12" width="6" height="24" rx="3" fill="#9B59B6"/>
+  <polygon points="37,9 34,12 40,12" fill="#8E44AD"/>
+  
+  <!-- Company Name -->
+  <text x="50" y="16" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">The Crayons</text>
+  <text x="50" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Network</text>
+  
+  <!-- Tagline -->
+  <text x="140" y="20" font-family="Arial, sans-serif" font-size="8" fill="#CCCCCC">Creative</text>
+  <text x="140" y="28" font-family="Arial, sans-serif" font-size="8" fill="#CCCCCC">Since 1986</text>
+</svg> 

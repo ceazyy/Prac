@@ -1,0 +1,58 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF7F00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#138808;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000080;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Overlay -->
+  <rect width="800" height="600" fill="rgba(0,0,0,0.3)"/>
+  
+  <!-- Taj Mahal Silhouette -->
+  <g transform="translate(300, 200)" fill="#FFFFFF" opacity="0.8">
+    <ellipse cx="100" cy="150" rx="80" ry="40"/>
+    <rect x="20" y="100" width="160" height="50"/>
+    <polygon points="100,50 50,100 150,100"/>
+    <circle cx="100" cy="80" r="20"/>
+    <rect x="90" y="50" width="20" height="30"/>
+  </g>
+  
+  <!-- Lotus -->
+  <g transform="translate(150, 350)" fill="#FFFFFF" opacity="0.6">
+    <ellipse cx="0" cy="0" rx="15" ry="8" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="8" transform="rotate(45)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="8" transform="rotate(90)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="8" transform="rotate(135)"/>
+    <circle cx="0" cy="0" r="5" fill="#FFD700"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="400" y="380" font-family="serif" font-size="48" font-weight="bold" fill="#FFFFFF" text-anchor="middle" filter="url(#glow)">Incredible</text>
+  <text x="400" y="430" font-family="serif" font-size="48" font-weight="bold" fill="#FFFFFF" text-anchor="middle" filter="url(#glow)">India</text>
+  
+  <!-- Tagline -->
+  <text x="400" y="480" font-family="sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">अतुल्य भारत</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="600" cy="150" r="3" fill="#FFD700" opacity="0.8">
+    <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="200" r="2" fill="#FF7F00" opacity="0.7">
+    <animate attributeName="r" values="2;5;2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="550" cy="120" r="4" fill="#138808" opacity="0.6">
+    <animate attributeName="r" values="4;7;4" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

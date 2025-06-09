@@ -1,0 +1,79 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="planeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F0F0F0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0E0E0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky Background -->
+  <rect width="800" height="600" fill="url(#skyGradient)"/>
+  
+  <!-- Clouds -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <ellipse cx="150" cy="100" rx="40" ry="20"/>
+    <ellipse cx="180" cy="90" rx="50" ry="25"/>
+    <ellipse cx="120" cy="110" rx="30" ry="15"/>
+    
+    <ellipse cx="600" cy="150" rx="60" ry="30"/>
+    <ellipse cx="640" cy="140" rx="45" ry="22"/>
+    <ellipse cx="570" cy="160" rx="35" ry="18"/>
+    
+    <ellipse cx="400" cy="80" rx="35" ry="18"/>
+    <ellipse cx="430" cy="75" rx="40" ry="20"/>
+  </g>
+  
+  <!-- Airplane -->
+  <g transform="translate(200, 250)">
+    <!-- Fuselage -->
+    <ellipse cx="200" cy="0" rx="180" ry="25" fill="url(#planeGradient)"/>
+    
+    <!-- Wings -->
+    <ellipse cx="150" cy="0" rx="120" ry="8" fill="#E0E0E0"/>
+    <ellipse cx="100" cy="15" rx="60" ry="5" fill="#E0E0E0"/>
+    
+    <!-- Tail -->
+    <polygon points="350,0 380,-30 380,-10 380,10 380,30" fill="url(#planeGradient)"/>
+    <polygon points="380,-25 390,-20 390,20 380,25" fill="#FF6600"/>
+    
+    <!-- Windows -->
+    <g fill="#4682B4" opacity="0.7">
+      <circle cx="80" cy="0" r="4"/>
+      <circle cx="100" cy="0" r="4"/>
+      <circle cx="120" cy="0" r="4"/>
+      <circle cx="140" cy="0" r="4"/>
+      <circle cx="160" cy="0" r="4"/>
+      <circle cx="180" cy="0" r="4"/>
+      <circle cx="200" cy="0" r="4"/>
+      <circle cx="220" cy="0" r="4"/>
+      <circle cx="240" cy="0" r="4"/>
+      <circle cx="260" cy="0" r="4"/>
+    </g>
+    
+    <!-- Air India Logo Area -->
+    <rect x="280" y="-15" width="60" height="30" fill="#FF6600" opacity="0.8"/>
+    <text x="310" y="5" font-family="serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI</text>
+  </g>
+  
+  <!-- Air India Text -->
+  <text x="400" y="400" font-family="serif" font-size="48" font-weight="bold" fill="#FF6600" text-anchor="middle">Air India</text>
+  <text x="400" y="440" font-family="sans-serif" font-size="20" fill="#4682B4" text-anchor="middle">Connecting Dreams</text>
+  
+  <!-- Trajectory Line -->
+  <path d="M 100 350 Q 400 200 700 150" stroke="#FF6600" stroke-width="3" fill="none" opacity="0.6" stroke-dasharray="10,5">
+    <animate attributeName="stroke-dashoffset" values="0;-30" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="500" r="2" fill="#FF6600" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="400" r="3" fill="#4682B4" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg> 
